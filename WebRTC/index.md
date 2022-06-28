@@ -6,6 +6,10 @@
 
 
 
+> 许多基于公网的视频会议系统都以WebRTC为基础，以尽可能低的延迟提供高质量的音频和视频实时通信服务。
+
+
+
 ## wikipedia [WebRTC](https://en.wikipedia.org/wiki/WebRTC)
 
 ### Design
