@@ -3,5 +3,5 @@ nav:
     - FFmpeg: FFmpeg
     - GStreamer: GStreamer
     - WebRTC: WebRTC
-    
+    - libyuv: libyuv    
     

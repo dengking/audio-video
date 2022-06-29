@@ -1,6 +1,6 @@
 nav:
     - Introduction: index.md
-    - Image: Image
+    - Computer-graphics: Computer-graphics
     - Video: Video
     - Software: Software
     - Application: Application
