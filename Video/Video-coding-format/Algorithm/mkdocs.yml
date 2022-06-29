@@ -1,0 +1,5 @@
+nav:
+    - Introduction: index.md
+    - Discrete-cosine-transform: Discrete-cosine-transform
+    - Motion-compensation: Motion-compensation    
+    
