@@ -89,3 +89,4 @@ Note that `getUserMedia()` must be used on a server, not the local file system, 
 
 ## Signaling: session control, network and media information
 
+WebRTC uses `RTCPeerConnection` to communicate streaming data between browsers (aka peers), but also needs a mechanism to coordinate communication and to send control messages, a process known as **signaling**. Signaling methods and protocols are *not* specified by WebRTC: signaling is not part of the RTCPeerConnection API.

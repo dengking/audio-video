@@ -30,9 +30,15 @@
 
 ## STUN
 
+一、在 baijiahao.baidu [实时音视频入门学习：开源工程WebRTC的技术原理和使用浅析](https://baijiahao.baidu.com/s?id=1721644496896867783&wfr=spider&for=pc) 中，有如下描述:
+
+> STUN服务器用于辅助内网穿透得到对应主机的公网网络地址和端口信息图
+
 ### wikipedia [STUN](https://en.wikipedia.org/wiki/STUN)
 
 
+
+### bloggeek [STUN](https://bloggeek.me/webrtcglossary/stun/#)
 
 
 

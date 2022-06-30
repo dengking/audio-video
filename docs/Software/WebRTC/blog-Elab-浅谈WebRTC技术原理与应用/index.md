@@ -1,6 +1,8 @@
-# Elab [浅谈WebRTC技术原理与应用](https://zhuanlan.zhihu.com/p/453986829)
+# Elab zhihu [浅谈WebRTC技术原理与应用](https://zhuanlan.zhihu.com/p/453986829)
 
 > https://baijiahao.baidu.com/s?id=1721644496896867783&wfr=spider&for=pc
+
+
 
 WebRTC**（Web Real-Time Communication）**，即网页即时通信。是一个支持[网页浏览器](https://link.zhihu.com/?target=https%3A//zh.wikipedia.org/wiki/%E7%B6%B2%E9%A0%81%E7%80%8F%E8%A6%BD%E5%99%A8)进行实时语音对话或视频对话的技术方案。从前端技术开发的视角来看，是一组可调用的API标准。
 
@@ -33,6 +35,14 @@ WebRTC**（Web Real-Time Communication）**，即网页即时通信。是一个�
 ![img](https://pic3.zhimg.com/80/v2-7410c262b95f959ec46e7187ad6fed4a_1440w.jpg)
 
 
+
+> NOTE:
+>
+> 需要注意的是，上面是两族协议:
+>
+> 第一列: 它不是WebRTC定义的，它所传输的是signaling message。
+>
+> 第二列: 它是WebRTC定义的，它所传输的是媒体流 。
 
 （WebRTC依赖众多协议栈图）
 
@@ -110,15 +120,15 @@ c.浏览器厂商可自定义的部分
 
 #### Transport
 
-1、SRTP（安全的实时传输协议，用于音视频流传输）
+1、SRTP: 安全的实时传输协议，用于**音视频流**传输
 
-2、Multiplexing（多路复用）
+2、Multiplexing: 多路复用
 
-3、P2P，STUN+TURN+ICE（用于NAT网络和防火墙穿越的）
+3、P2P: STUN+TURN+ICE，用于NAT网络和防火墙穿越的
 
-4、安全传输可能还会用到DTLS（数据报安全传输），用于加密传输和密钥协商
+4、DTLS: 安全传输可能还会用到DTLS（数据报安全传输），用于加密传输和密钥协商
 
-5、整个WebRTC通信是基于UDP的
+5、UDP: 整个WebRTC通信是基于UDP的
 
 ## 六、实现原理
 
@@ -138,7 +148,15 @@ WebRTC是建立浏览器端到端的连接（P2P），由于不需要服务器�
 
 ### 2. 信令服务器：网络协商与信息交换
 
-信令服务器的作用是基于双工通信来中转信息。中转信息包括公网IP映射后的网络定位信息（公网IP、端口）和媒体数据流等。
+信令服务器的作用是基于双工通信来中转信息。中转信息包括:
+
+1、公网IP映射后的网络定位信息（公网IP、端口）
+
+2、媒体数据流
+
+3、......
+
+
 
 
 
@@ -161,6 +179,10 @@ WebRTC是建立浏览器端到端的连接（P2P），由于不需要服务器�
 
 
 ### 3. 会话描述协议SDP：统一的媒体协商方式
+
+> NOTE:
+>
+> 关于SDP，在 [WebRTC for the Curious](https://webrtcforthecurious.com/) # [Signaling](https://webrtcforthecurious.com/docs/02-signaling/) # [What is the *Session Description Protocol* (SDP)?](https://webrtcforthecurious.com/docs/02-signaling/#what-is-the-session-description-protocol-sdp) 有着更加详细的介绍。
 
 不同端/浏览器对于媒体流数据的编码格式各异，如VP8、VP9等，参与会话的各个成员的能力不对等、用户环境与配置不一致等。
 
@@ -203,6 +225,8 @@ a=ssrc:2223794119 label:H4fjnMzxy3dPIgQ7HxuCTLb4wLLLeRHnFxh81
 
 ### 4.一对一连接建立过程
 
+建立一对一的Web RTC连接过程为
+
 
 
 ![img](https://pic2.zhimg.com/80/v2-f56f5bb335ddbb3430d623b1dc27fbc9_1440w.jpg)
@@ -213,6 +237,14 @@ a=ssrc:2223794119 label:H4fjnMzxy3dPIgQ7HxuCTLb4wLLLeRHnFxh81
 
 
 
+**如上图所示，解释一下：**
+
+*1）*交换SDP，获取各自媒体配置信息；
+
+*2）*STUN服务器交换网络地址和端口等网络信息；
+
+*3）*Turn中转音视频媒体流数据。
+
 
 
 
@@ -222,6 +254,8 @@ a=ssrc:2223794119 label:H4fjnMzxy3dPIgQ7HxuCTLb4wLLLeRHnFxh81
 
 
 ![img](https://pic3.zhimg.com/80/v2-1cbc9c5221bd4e6c4a4d8995cc6dcf9e_1440w.jpg)
+
+（工作流程图）
 
 1、A和B双方先调用 `getUserMedia` 打开本地摄像头，作为本地待输出媒体流；
 
@@ -247,9 +281,11 @@ a=ssrc:2223794119 label:H4fjnMzxy3dPIgQ7HxuCTLb4wLLLeRHnFxh81
 
 ### 6. JavaScript主要接口
 
- 
 
-- [getUserMedia()](https://link.zhihu.com/?target=https%3A//webrtc.github.io/samples/src/content/getusermedia/gum/)：访问数据流，例如来自用户的相机和麦克风
+
+#### [getUserMedia()](https://link.zhihu.com/?target=https%3A//webrtc.github.io/samples/src/content/getusermedia/gum/)
+
+[getUserMedia()](https://link.zhihu.com/?target=https%3A//webrtc.github.io/samples/src/content/getusermedia/gum/)：访问数据流，例如来自用户的相机和麦克风
 
 ```js
 //请求媒体类型
@@ -273,7 +309,9 @@ navigator.mediaDevices.getUserMedia(constraints).
   then(handleSuccess).catch(handleError);
 ```
 
-- [RTCPeerConnection](https://link.zhihu.com/?target=https%3A//webrtc.github.io/samples/src/content/peerconnection/pc1/)：通过加密和带宽管理工具启用音频或视频通话
+#### [RTCPeerConnection](https://link.zhihu.com/?target=https%3A//webrtc.github.io/samples/src/content/peerconnection/pc1/)
+
+[RTCPeerConnection](https://link.zhihu.com/?target=https%3A//webrtc.github.io/samples/src/content/peerconnection/pc1/)：通过加密和带宽管理工具启用音频或视频通话
 
 ```js
 // 允许 RTC 服务器配置。
@@ -295,7 +333,11 @@ localPeerConnection.ontack=function(event){
 }
 ```
 
-- [RTCDataChannel](https://link.zhihu.com/?target=https%3A//webrtc.github.io/samples/src/content/datachannel/basic/)：支持通用数据的点对点通信，常用于数据点到点的传输
+
+
+#### [RTCDataChannel](https://link.zhihu.com/?target=https%3A//webrtc.github.io/samples/src/content/datachannel/basic/)
+
+[RTCDataChannel](https://link.zhihu.com/?target=https%3A//webrtc.github.io/samples/src/content/datachannel/basic/)：支持通用数据的点对点通信，常用于数据点到点的传输
 
 ```js
 const pc = new RTCPeerConnection();
@@ -314,7 +356,11 @@ dc.onclose = function () {
 };
 ```
 
+
+
 ## 七、应用案例
+
+多人视频案例为实践应用
 
 ### 1. 设计框架
 
@@ -327,6 +373,36 @@ dc.onclose = function () {
 ### 2.关键代码
 
 #### 1.1 媒体捕获
+
+获取浏览器视频权限，捕获本地视频媒体流，在Video元素中附加媒体流，显示本地视频结果。
+
+```javascript
+//摄像头兼容性处理
+navigator.getUserMedia = ( navigator.getUserMedia ||
+               navigator.webkitGetUserMedia ||
+               navigator.mozGetUserMedia ||
+               navigator.msGetUserMedia);
+// 获取本地音频和视频流
+navigator.mediaDevices.getUserMedia({
+                "audio": false,
+                "video": true
+}).then( (stream)=> {
+//显示自己的输出流，挂到页面Video元素上
+    document.getElementById("myVido").srcObject=stream
+})
+```
+
+#### 1.2 网络协商
+
+创建对等连接，收集ICE候选，等待媒体流接入时挂载到dom
+
+
+
+#### 1.3 媒体协商
+
+
+
+#### 1.4 信令中转
 
 
 
