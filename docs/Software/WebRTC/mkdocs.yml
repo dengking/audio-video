@@ -1,6 +1,8 @@
 nav:
     - Introduction: index.md
-    - book-WebRTC-Cookbook: book-WebRTC-Cookbook
     - blog-Elab-浅谈WebRTC技术原理与应用: blog-Elab-浅谈WebRTC技术原理与应用
+    - blog-webplatform-WebRTC: blog-webplatform-WebRTC
+    - book-WebRTC-Cookbook: book-WebRTC-Cookbook
+    - book-WebRTC权威指南: book-WebRTC权威指南
     - Signaling: Signaling
     - P2P-STUN&TURN&ICE: P2P-STUN&TURN&ICE
