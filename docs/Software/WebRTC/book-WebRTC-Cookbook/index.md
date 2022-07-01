@@ -20,5 +20,5 @@ The signaling stage is represented in the schema that is shown in the following 
 
 This chapter also covers the basic use case of how to use **WebRTC data channels**: **file transferring** and **peer-to-peer chat**.
 
-You will also learn how to configure and use Session Traversal Utilities for NAT (STUN) and Traversal Using Relays around NAT (TURN) services, and of course, this chapter covers making peer-to-peer calls using WebRTC.
+You will also learn how to configure and use **Session Traversal Utilities for NAT (STUN)** and **Traversal Using Relays around NAT (TURN)** services, and of course, this chapter covers making peer-to-peer calls using WebRTC.
 

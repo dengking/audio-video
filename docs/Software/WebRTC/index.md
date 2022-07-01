@@ -30,10 +30,31 @@ The WebRTC API includes **no provisions for signaling**, that is discovering pee
 
 这一点非常重要，关于它的解释，参见:
 
-1、Elab [浅谈WebRTC技术原理与应用](https://zhuanlan.zhihu.com/p/453986829)
+1、Elab [浅谈WebRTC技术原理与应用](https://zhuanlan.zhihu.com/p/453986829) 
 
-2、webplatform [WebRTC](https://webplatform.github.io/docs/concepts/Internet_and_Web/webrtc/)
+2、webplatform [WebRTC](https://webplatform.github.io/docs/concepts/Internet_and_Web/webrtc/) 
 
 
 
-## w3c.githu [WebRTC 1.0: Real-Time Communication Between Browsers](https://w3c.github.io/webrtc-pc/)
+## books
+
+| book                                                         | 简介 |
+| ------------------------------------------------------------ | ---- |
+| [WebRTC权威指南](https://book.douban.com/subject/26915289/)  |      |
+| Andrii Sergiienko [**WebRTC Cookbook**](http://subnets.ru/books/webrtc-cookbook-andrii-sergiienko.pdf) |      |
+| [WebRTC for the Curious](https://webrtcforthecurious.com/)   |      |
+
+
+
+
+
+## 标准
+
+### w3c.githu [WebRTC 1.0: Real-Time Communication Between Browsers](https://w3c.github.io/webrtc-pc/)
+
+
+
+
+
+### developer.mozilla [WebRTC](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API)
+

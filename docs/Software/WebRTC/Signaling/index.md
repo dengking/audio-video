@@ -42,7 +42,7 @@ Signaling交换的流程图:
 
 三、webrtcforthecurious [Signaling](https://webrtcforthecurious.com/docs/02-signaling/) 
 
-关于webrtc到Signaling描述地最好的是 webrtcforthecurious [Signaling](https://webrtcforthecurious.com/docs/02-signaling/) ，下面highlight一些其中描述的内容:
+webrtcforthecurious [Signaling](https://webrtcforthecurious.com/docs/02-signaling/) ，下面highlight一些其中描述的内容:
 
 1、WebRTC uses an existing protocol called the Session Description Protocol.
 

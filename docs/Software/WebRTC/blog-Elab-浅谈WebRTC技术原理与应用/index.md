@@ -400,7 +400,7 @@ navigator.mediaDevices.getUserMedia({
 
 #### 1.3 媒体协商
 
-
+> NOTE: 上述两个"协商"总结地不错
 
 #### 1.4 信令中转
 
