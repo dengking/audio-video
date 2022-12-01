@@ -26,3 +26,17 @@
 | ---------------------- | ------------------------------------------------------------ |
 |                        | 每个像素点只有一个分量: 该点的亮度值                         |
 
+
+
+## Vector vs Raster Graphics
+
+
+
+### geeksforgeeks [Vector vs Raster Graphics](https://www.geeksforgeeks.org/vector-vs-raster-graphics/)
+
+
+
+![img](https://media.geeksforgeeks.org/wp-content/uploads/vector-raster-graphics.png)
+
+
+
